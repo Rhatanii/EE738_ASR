@@ -23,5 +23,6 @@ python train_20247013.py \
     --save_path ${SAVE_PATH} \
     --log_dir ${LOG_DIR} \
     --start_epoch ${START_EPOCH} \
-    --initial_model ${INIT_MODEL}
+    --initial_model ${INIT_MODEL} \
+    --eval
 

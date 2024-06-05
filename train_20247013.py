@@ -401,6 +401,7 @@ def main():
     parser.add_argument('--max_length', type=int, default=10,   help='maximum length of audio file in seconds')
     parser.add_argument('--train_list', type=str, default='./data/ks_train.json')
     parser.add_argument('--val_list',   type=str, default='./data/ks_val.json')
+    parser.add_argument('--test_list',   type=str, default='./data/ks_test_rel.json')
     parser.add_argument('--labels_path',type=str, default='./data/label.json')
     parser.add_argument('--train_path', type=str, default='./data/kspon_train')
     parser.add_argument('--val_path',   type=str, default='./data/kspon_eval')
@@ -465,7 +466,7 @@ def main():
 
     ## code for inference - this uses val_path and val_list
     if args.eval:
-        process_eval_cer(model, args.val_path, args.val_list, index2char, save_path=args.save_path)
+        process_eval_cer(model, args.val_path, args.test_list, index2char, save_path=args.save_path)
         quit();
 
     # initialise seeds
