@@ -22,6 +22,10 @@ from torchaudio.models import Conformer
 # Model archictecture
 ## ===================================================================
 class Conv2dSubsampling(nn.Module):
+  '''
+    Subsampling mel spectrogram 4x size for reducing length.
+    Constituted with two 2D convolution layers.
+  '''
   def __init__(self, d_model=144):
     super(Conv2dSubsampling, self).__init__()
     self.module = nn.Sequential(
@@ -40,6 +44,11 @@ class Conv2dSubsampling(nn.Module):
 
 
 class Conformer_Decoder(nn.Module):
+  '''
+    Conv2dsubsampling
+    Conformer
+    Decoder-LSTM
+  '''
   def __init__(
           self,
           d_input=80,
@@ -521,5 +530,6 @@ def main():
 
     f_log.close()
     writer.close()
+
 if __name__ == "__main__":
     main()
