@@ -1,9 +1,11 @@
 # Automatic Speech Recognition Project
 Dataset: Kspon Dataset
+
 Model: 16-layer Conformer
 
 ## Validation Accuracy
 Baseline Validation CER: 31.85%
+
 Conformer Validation CER: 14.67%
 
 ## Summary
