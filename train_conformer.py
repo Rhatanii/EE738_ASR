@@ -46,8 +46,8 @@ class Conv2dSubsampling(nn.Module):
 class Conformer_Decoder(nn.Module):
   '''
     Conv2dsubsampling
-    Conformer
-    Decoder-LSTM
+    Conformer: Encoder for speech reprsentation
+    Decoder-LSTM: 
   '''
   def __init__(
           self,
@@ -55,7 +55,6 @@ class Conformer_Decoder(nn.Module):
           d_model=144,
           num_layers=16,
           conv_kernel_size=31, 
-          feed_forward_residual_factor=.5,
           feed_forward_expansion_factor=4,
           num_heads=4,
           dropout=.1,
@@ -450,7 +449,6 @@ def main():
         d_model = 144,
         num_layers = 16,
         conv_kernel_size=31, 
-        feed_forward_residual_factor=.5,
         feed_forward_expansion_factor=4,
         num_heads=4,
         dropout=.1,
