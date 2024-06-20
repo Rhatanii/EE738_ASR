@@ -3,6 +3,11 @@ Dataset: Kspon Dataset
 
 Model: 16-layer Conformer
 
+## Training
+```shell
+sh train_conformer.sh
+```
+
 ## Validation Accuracy
 Baseline Validation CER: 31.85%
 
