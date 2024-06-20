@@ -1,6 +1,6 @@
 Automatic Speech Recognition Project
 
-Dataset: Kspon Dataset\n
+Dataset: Kspon Dataset
 Model: 16-layer Conformer
 
 Baseline Validation CER: 31.85%
